@@ -25,7 +25,7 @@
 		     <p><span class="comment">#Here goes our custom code-</span></p>		
 		     <p><span class="yell">print</span>("Hello World!")</p>	
                  </div>
-		 <p class="lead">Now printing just "Hello World!" is obviously non-malicious, so how do we convert it into a malware and compromise that system by just a pinch of code? Here comes the role of trickery which lets you easily hack the system completely with just adding 2-3 lines of code in your main custom program. Here is how-</p>
+		 <p class="lead">Now printing just "Hello World!" is obviously non-malicious, so how do we convert it into a malware and compromise that system by just a pinch of code? Here comes the role of trickery which lets you easily hack the system completely by adding just 2-3 lines of code in your main custom program. Here is how-</p>
 		 <div class="codebox">
 		     <p><span class="yell">from</span> trickery <span class="yell">import</span> attack_backdoor <span class="comment">#This will import the function from trickery which will attach the backdoor into hello.py</span></p>
 			</br>	
@@ -36,7 +36,7 @@
                  </div>		
 		 <p class="lead">Now save this program in a new file as <span class="filed">evil-hello.py</span> and run it on the target system.</p>
 		 </br>	
-		 <p> <i><u>NOTE</u>: It is suggested to avoid the print function in clean code, instead open any image or a graphic window (using tkinter) when the file will run, and change the python file to no console python file (i.e. .py to .pyw in order to disable the console window). Also packaging it afterwards, depending upon the operating system of target machine (-for example: converting python file to executable for windows), would require no pre-installation of python module.</i></p></br>
+		 <p> <i><u>NOTE</u>: It is suggested to avoid the print function in clean code, instead open any image or a graphic window (using tkinter) when the file will run, and change the python file to no console python file (i.e. .py to .pyw in order to disable the console window). Also packaging it afterwards, depending upon the operating system of target machine (-for example: converting python file to executable for windows), would require no pre-installation of python and other modules.</i></p></br>
 		 <p class="lead">Now we are almost done as we just need to bind a listener to hear for incoming connections which can be done either by the manual setup or with the help of trickery.listen() function.</p></br>
 		 <p class="lead">Here is how to bind the listener on the hacker's system using listen method by creating a new file as <span class="filed">listener.py</span>-</p>
 		 <div class="codebox">
