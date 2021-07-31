@@ -1,0 +1,34 @@
+html,body{
+    height:100%;
+    width:100%;
+    color:#535c65;
+}
+.container{
+    background-color:#e6e6e6;
+    padding: 5px;
+    border: 1px solid grey;
+}
+.container p, h5 {
+    margin: 5px;
+}
+.filed{
+    color:#787896;
+    text-decoration:underline;
+}
+.codebox{
+    margin:0.5cm;
+    padding:5px;
+    border: 2px solid grey;
+    font-family: 'Ubuntu Mono', monospace;
+    background-color: white;
+    overflow:auto;
+}
+.comment{
+    color:red;
+}
+.yell{
+    color:#8f00a0;
+}
+li{
+   text-decoration:underline;
+}
